@@ -19,8 +19,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	
 
 	@Override
-	public void registerEmployee(Employee employee) {
-		employeeRepository.save(employee);
+	public Employee registerEmployee(Employee employee) {
+		return employeeRepository.save(employee);
 
 
 		

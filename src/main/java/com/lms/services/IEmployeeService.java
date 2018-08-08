@@ -4,7 +4,7 @@ import com.lms.model.Employee;
 
 public interface IEmployeeService {
 
-	void registerEmployee(Employee employee);
+	Employee registerEmployee(Employee employee);
 
 	Employee findByUserNameAndPassword(String userName, String password);
 
