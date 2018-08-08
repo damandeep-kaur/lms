@@ -12,13 +12,13 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 public class RedisConfig {
-/*
+
 	@Value("${spring.redis.port}")
 	private int redisPort;
 
 	@Value("${spring.redis.host}")
 	private String redisHost;
-//
+
 	@Bean
 	JedisConnectionFactory jedisConnectionFactory() {
 		JedisConnectionFactory factory = new JedisConnectionFactory();
@@ -38,5 +38,5 @@ public class RedisConfig {
 		template.setValueSerializer(new GenericToStringSerializer<Object>(Object.class));
 		template.setValueSerializer(new Jackson2JsonRedisSerializer<Object>(Object.class));
 		return template;
-	}*/
+	}
 }

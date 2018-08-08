@@ -13,7 +13,7 @@ import com.lms.services.IRedis;
 
 
 @Service
-public class Redis implements IRedis {/*
+public class Redis implements IRedis {
 	@Autowired
 	private RedisTemplate<String, Object> template;
 
@@ -34,5 +34,5 @@ public class Redis implements IRedis {/*
 		keys.add(key);
 		template.opsForValue().getOperations().delete(keys);
 	}
-*/
+
 }

@@ -1,5 +1,7 @@
 package com.lms.service.impl;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +10,7 @@ import com.lms.repositories.EmployeeRepository;
 import com.lms.services.IEmployeeService;
 
 @Service
+@Transactional
 public class EmployeeServiceImpl implements IEmployeeService {
 
 	@Autowired

@@ -21,7 +21,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @ComponentScan("com.lms.service.impl")
 @ComponentScan("com.lms.controller")
 @ComponentScan("com.lms.config")
-
 @SpringBootApplication
 public class LeaveManagementSystemApplication {
 	

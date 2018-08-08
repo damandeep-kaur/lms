@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @RestController
 @RequestMapping("/api1")
 public class AuthenticationController {
-/*	@Autowired
+	@Autowired
 	private IEmployeeService employeeService;
 	@Autowired
 	private IRedis redis;
@@ -45,7 +46,7 @@ public class AuthenticationController {
 								.signWith(SignatureAlgorithm.HS256, "secret".getBytes("UTF-8")).compact();
 						redis.setValue(employee.getUserName(), token);
 						
-						 userService.registerUser(user); 
+						 //userService.registerUser(user); 
 						return "Successfully Login";
 					} catch (UnsupportedEncodingException e) {
 
@@ -60,6 +61,14 @@ public class AuthenticationController {
 		}
 		return "";
 
-	}*/
+	}
+	
+	@PostMapping("/logout")
+	public String logout(@RequestBody Employee employee) {
+		
+		redis.deleteValue(employee.getUserName());
 
+return "Sucessfully logout";
+
+	}
 }
