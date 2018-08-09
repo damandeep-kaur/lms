@@ -2,6 +2,8 @@ package com.lms.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -28,16 +30,30 @@ public class AuthenticationController {
 	@Autowired
 	private RedisTemplate<String, Object> template;
 	
-	@PostMapping("/login")
-	public String login(@RequestBody Employee employee) {
-		
+	@PostMapping("/loginUserName")
+	public  Map<String,String> loginUsername(@RequestBody Employee employee) {
+		Map<String,String> map=new HashMap<>();
 		Employee employee1 = employeeService.findByUserName(employee.getUserName());
 
 		if (employee1 == null) {
-			return "Employee doesnot exist";
+			map.put("message","Employee does not exist") ;
+			map.put("status",HttpStatus.CONFLICT.toString());
+			
 		}
-
-		else {
+		else
+		{
+			map.put("message","Employee exist") ;
+			map.put("status",HttpStatus.ACCEPTED.toString());
+			
+		}
+		return map;
+		
+	}
+	@PostMapping("/loginPassword")
+	public String loginPassword(@RequestBody Employee employee) {
+	
+		{
+			Employee employee1 = employeeService.findByUserName(employee.getUserName());
 			
 			if (employee1.getPassword().equals(employee.getPassword())) {
 					try {

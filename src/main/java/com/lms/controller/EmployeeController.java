@@ -7,7 +7,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,13 +38,19 @@ public class EmployeeController {
 			map.put("message","User already registered") ;
 			map.put("status",HttpStatus.CONFLICT.toString());
 		} else {
-			
+
 			employeeService.registerEmployee(employee);
 
 			map.put("message","Employee successfully entered") ;
 			map.put("status",HttpStatus.CREATED.toString());
-			
+
 		}
 		return map;
-}}
+	}
+
+	@GetMapping("/hello")
+	public String hello() {
+		return "hi";
+	}
+}
 
