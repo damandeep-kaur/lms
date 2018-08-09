@@ -48,6 +48,7 @@ public class UserUnitTestCase {
 		      String str = "Junit is working fine";
 		      assertEquals("Junit is working fine",str);
 		   }
+		   
 	
 	/*@Test
 	public void createUserTest3() {

@@ -85,13 +85,13 @@
 		<repository>
 			<id>deployment</id>
 			<name>Internal Release</name>
-			<url>http://52.87.246.206:8080/repository/prod_ps/</url>
+			<url>http://52.87.246.206:8080/repository/lms/</url>
 		</repository>
 
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Internal Release</name>
-			<url>http://52.87.246.206:8080/repository/prod_ps_snap/</url>
+			<url>http://52.87.246.206:8080/repository/lms_snap/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
