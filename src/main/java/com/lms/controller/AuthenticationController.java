@@ -36,15 +36,17 @@ public class AuthenticationController {
 	public  Map<String,String> loginUsername(@RequestBody Employee employee) {
 		Map<String,String> map=new HashMap<>();
 		Employee employee1 = employeeService.findByUserName(employee.getUserName());
-		ename=employee1.getUserName();
-		/*System.out.println(employee1);*/
+		
+		System.out.println("hi");
+		System.out.println(employee1);
 		if (employee1 == null) {
 			map.put("message","Employee does not exist") ;
-			map.put("status",HttpStatus.CONFLICT.toString());
+			map.put("status",HttpStatus.UNAUTHORIZED.toString());
 			
 		}
 		else
-		{
+		{System.out.println(employee1);
+		ename=employee1.getUserName();
 			map.put("message","Employee exist") ;
 			map.put("status",HttpStatus.ACCEPTED.toString());
 			
