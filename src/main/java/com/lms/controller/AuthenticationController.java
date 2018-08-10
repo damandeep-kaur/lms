@@ -37,7 +37,7 @@ public class AuthenticationController {
 		Map<String,String> map=new HashMap<>();
 		Employee employee1 = employeeService.findByUserName(employee.getUserName());
 		ename=employee1.getUserName();
-		System.out.println(employee1);
+		/*System.out.println(employee1);*/
 		if (employee1 == null) {
 			map.put("message","Employee does not exist") ;
 			map.put("status",HttpStatus.CONFLICT.toString());
