@@ -18,64 +18,87 @@ public class Employee implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="first_name")
+	@Column(name = "first_name")
 	private String firstName;
-	@Column(name="last_name")
+	@Column(name = "last_name")
 	private String lastName;
-	@Column(unique=true,name="user_name")
+	@Column(unique = true, name = "user_name")
 	private String userName;
-	@Column(name="password")
+	@Column(name = "password")
 	private String password;
-	public Employee(Integer id, String firstName, String lastName, String userName, String password) {
+	@Column(name = "role")
+	private String role;
+
+	public Employee(Integer id, String firstName, String lastName, String userName, String password, String role) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.userName = userName;
 		this.password = password;
+		this.role = role;
 	}
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + "]";
-	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+				+ ", password=" + password + ", role=" + role + "]";
+	}
+
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
-
 
 }

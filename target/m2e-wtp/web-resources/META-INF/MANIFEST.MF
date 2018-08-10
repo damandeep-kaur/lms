@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Implementation-Title: Leave-Management-System
-Implementation-Version: 1.0.0
+Implementation-Version: 1.0.1
 Built-By: damandeep.kaur
 Implementation-Vendor-Id: com.example
 Build-Jdk: 1.8.0_121

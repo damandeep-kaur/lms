@@ -72,9 +72,20 @@ public class AuthenticationController {
 					redis.setValue(employee.getUserName(), token);
 
 					// userService.registerUser(user);
-					map.put("message","Valid Password") ;
+					
+					System.out.println(employee1.getRole());
+					if(employee1.getRole().equals("Admin"))
+					{
+					map.put("message","Admin") ;
 					map.put("status",HttpStatus.ACCEPTED.toString());
+					}
+					else{
 
+						map.put("message","User") ;
+						map.put("status",HttpStatus.ACCEPTED.toString());
+						
+						
+					}
 				} catch (UnsupportedEncodingException e) {
 
 					e.printStackTrace();
