@@ -42,14 +42,14 @@ public class UserUnitTestCase {
 	@MockBean
 	EmployeeRepository employeeRepository;
 	
-	
+	/*
 		   @Test
 			public void testAdd() {
 		      String str = "Junit is working fine";
 		      assertEquals("Junit is working fine",str);
 		   }
 		   
-	
+	*/
 	/*@Test
 	public void createUserTest3() {
 		Employee emp1=new Employee();
