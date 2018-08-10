@@ -20,7 +20,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 	@Override
 	public Employee registerEmployee(Employee employee) {
+		employee.setRole("User");
 		return employeeRepository.save(employee);
+		
 
 
 		

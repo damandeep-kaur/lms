@@ -28,6 +28,7 @@ public class Employee implements Serializable {
 	private String password;
 	@Column(name = "role")
 	private String role;
+	
 
 	public Employee(Integer id, String firstName, String lastName, String userName, String password, String role) {
 		super();
