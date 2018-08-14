@@ -24,4 +24,9 @@ public class ListOfHolidaysServiceImpl implements IListOfHolidaysService {
 
 }
 
+	@Override
+	public ListOfHolidays registerHoliday(ListOfHolidays listOfHoliday) {
+		return holidayRepository.save(listOfHoliday);
+	}
+
 }
