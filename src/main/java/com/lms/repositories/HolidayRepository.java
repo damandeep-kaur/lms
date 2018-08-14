@@ -8,5 +8,6 @@ import com.lms.model.ListOfHolidays;
 
 @Repository
 public interface HolidayRepository extends JpaRepository<ListOfHolidays, Integer>{
+	ListOfHolidays findByType(String type);
 
 }
