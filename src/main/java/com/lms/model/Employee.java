@@ -31,7 +31,7 @@ public class Employee implements Serializable {
 	
 
 	public Employee(Integer id, String firstName, String lastName, String userName, String password, String role) {
-		super();
+		
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

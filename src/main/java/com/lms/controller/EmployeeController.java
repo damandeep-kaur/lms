@@ -38,7 +38,7 @@ public class EmployeeController {
 			map.put("message","User already registered") ;
 			map.put("status",HttpStatus.CONFLICT.toString());
 		} else {
-
+			employee.setRole("User");
 			employeeService.registerEmployee(employee);
 
 			map.put("message","Employee successfully entered") ;
