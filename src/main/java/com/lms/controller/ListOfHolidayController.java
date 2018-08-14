@@ -42,7 +42,7 @@ public class ListOfHolidayController {
 
 				
 	}
-	@PostMapping("/test")
+	@GetMapping("/test")
 	public String test()
 	{
 		return "test";
