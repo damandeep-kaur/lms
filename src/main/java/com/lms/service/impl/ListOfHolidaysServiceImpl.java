@@ -29,4 +29,9 @@ public class ListOfHolidaysServiceImpl implements IListOfHolidaysService {
 		return holidayRepository.save(listOfHoliday);
 	}
 
+	@Override
+	public void deleteHoliday(int id) {
+		 holidayRepository.deleteById(id);
+	}
+
 }

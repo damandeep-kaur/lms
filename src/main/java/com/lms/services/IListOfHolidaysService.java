@@ -6,5 +6,7 @@ import com.lms.model.ListOfHolidays;
 public interface IListOfHolidaysService {
 	ListOfHolidays findByType(String type);
 	ListOfHolidays registerHoliday(ListOfHolidays holiday);
+	void deleteHoliday(int id);
+	
 
 }

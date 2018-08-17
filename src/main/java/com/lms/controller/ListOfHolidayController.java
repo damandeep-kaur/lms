@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +39,12 @@ public class ListOfHolidayController {
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public void add(@RequestBody ListOfHolidays listOfHolidays) {
 		Map<String,String> map=new HashMap<>();
+		iListOfHolidaysService.registerHoliday(listOfHolidays);
+
+				
+	}
+	@DeleteMapping(value="/delete")
+	public void delete(@RequestBody ListOfHolidays listOfHolidays) {
 		iListOfHolidaysService.registerHoliday(listOfHolidays);
 
 				
