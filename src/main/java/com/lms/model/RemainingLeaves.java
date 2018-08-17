@@ -1,4 +1,4 @@
-package com.lms.model;
+/*package com.lms.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -14,3 +14,4 @@ public class RemainingLeaves {
 	
 
 }
+*/
