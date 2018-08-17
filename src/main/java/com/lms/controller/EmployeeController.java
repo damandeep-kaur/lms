@@ -38,7 +38,7 @@ public class EmployeeController {
 			map.put("message","User already registered") ;
 			map.put("status",HttpStatus.CONFLICT.toString());
 		} else {
-			employee.setRole("User");
+			//employee.setRole("User");
 			employee.setCasualLeaves(12);
 			employee.setSpecialOccassionLeaves(3);
 			employee.setOptionalHolidays(3);
