@@ -263,4 +263,113 @@ public class LeaveManagementSystemApplicationTests {
 	e.printStackTrace();
 	}
 	}
+	@Test
+	public void testViewWrongRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testAddWrongRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api/add").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testloginRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api1/loginUserName").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testloginPasswordRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api1/loginPassword").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testlogout2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api1/loginUserName").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testleavesRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api4/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testaddHolidayRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api2/add").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testViewHolidaysRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.delete("/api2/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testDeleteHolidaysRequestGivesError2() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api2/delete").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
 }
+ 
