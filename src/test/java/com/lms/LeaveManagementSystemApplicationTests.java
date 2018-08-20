@@ -21,5 +21,4 @@ public class LeaveManagementSystemApplicationTests {
 		String str="Hello";
 		assertEquals("Hello",str);
 	}
-	
 }
