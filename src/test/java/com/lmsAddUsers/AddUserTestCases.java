@@ -1,4 +1,4 @@
-package com.lms.addUsers;
+package com.lmsAddUsers;
 
 import static org.junit.Assert.assertEquals;
 
