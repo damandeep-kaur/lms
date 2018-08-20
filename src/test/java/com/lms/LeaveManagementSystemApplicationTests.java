@@ -1,5 +1,7 @@
 package com.lms;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,4 +15,11 @@ public class LeaveManagementSystemApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void testEquals()
+	{
+		String str="Hello";
+		assertEquals("Hello",str);
+	}
+	
 }
