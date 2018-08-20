@@ -48,9 +48,213 @@ public class LeaveManagementSystemApplicationTests {
 		assertEquals("Hello",str);
 	}
 	@Test
-	public void testCreateEmptyJsonGivesError() {
+	public void testViewWrongRequestGivesError() {
 	String brandJson = "{ }";
 	RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/api/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testAddWrongRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/add").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testloginRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api1/loginUserName").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testloginPasswordRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api1/loginPassword").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testlogout() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api1/loginUserName").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testleavesRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/api4/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testaddHolidayRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api2/add").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testViewHolidaysRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/api2/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testDeleteHolidaysRequestGivesError() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api2/delete").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testViewWrongRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testAddWrongRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api/add").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testloginRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api1/loginUserName").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testloginPasswordRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api1/loginPassword").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testlogout1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api1/loginUserName").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testleavesRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api4/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testaddHolidayRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api2/add").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testViewHolidaysRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api2/viewAll").accept(MediaType.APPLICATION_JSON)
+	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
+	try {
+	MvcResult result = mvc.perform(requestBuilder).andReturn();
+	assertEquals(405, result.getResponse().getStatus());
+	}catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	@Test
+	public void testDeleteHolidaysRequestGivesError1() {
+	String brandJson = "{ }";
+	RequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api2/delete").accept(MediaType.APPLICATION_JSON)
 	.content(brandJson).contentType(MediaType.APPLICATION_JSON);
 	try {
 	MvcResult result = mvc.perform(requestBuilder).andReturn();
