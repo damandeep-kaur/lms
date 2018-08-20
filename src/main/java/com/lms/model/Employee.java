@@ -18,22 +18,22 @@ public class Employee implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name = "first_name")
+	@Column(name = "first_name",nullable=false)
 	private String firstName;
-	@Column(name = "last_name")
+	@Column(name = "last_name",nullable=false)
 	private String lastName;
-	@Column(unique = true, name = "user_name")
+	@Column(unique = true, name = "user_name",nullable=false)
 	private String userName;
-	@Column(name = "password")
+	@Column(name = "password",nullable=false)
 	private String password;
-	@Column(name = "role")
+	@Column(name = "role",nullable=false)
 	private String role;
 
-	@Column(name = "casual_leaves")
+	@Column(name = "casual_leaves",nullable=false)
 	private int casualLeaves;
-	@Column(name = "optional_holidays")
+	@Column(name = "optional_holidays",nullable=false)
 	private int optionalHolidays;
-	@Column(name = "special_occassion_leaves")
+	@Column(name = "special_occassion_leaves",nullable=false)
 	private int specialOccassionLeaves;
 	
 
